@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DevScope helps recruiters find developers through GitHub profiles and repositories, then manage a shortlist of candidates in one place">
+    <title>DevScope</title>
+
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="js/recherche.js"></script>
+</head>
+
+<body class="min-h-screen bg-fixed 
+bg-linear-to-b from-slate-800 from-10% via-slate-950 via-30% to-slate-950">
+    <header class="flex items-center justify-between px-4 py-5 
+    border-b border-gray-600 rounded-xl m-6 bg-slate-900">
+
+    <h4 class="flex items-center gap-2 text-xl font-bold text-white">
+        <span class="h-3 w-3 rounded-full bg-cyan-300"></span>
+        <span>DevScope</span>
+    </h4>
+  <nav>
+      <a class="font-inter font-semibold rounded-lg text-cyan-300 py-1 px-1" href="index.html">Recherche</a>
+      <a class="font-inter font-semibold hover:text-cyan-200 text-gray-400 py-1 px-1" href="pages/shortlist.html">Shortlist</a>
+  </nav>
+</header>
+    <main class="flex-col">
+        <section id="heading" class="flex justify-center items-center mt-24">
+            <h1 class="font-poppins text-white text-5xl text-center 
+            font-semibold max-w-2xl">Trouvez les meilleurs développeurs grâce à
+            <span class="text-cyan-400">leur</span>
+            <br><span class="bg-gradient-to-r from-fuchsia-500 via-pink-600 to-pink-400 bg-clip-text text-transparent inline-block">code</span></h1>
+        </section>
+        <p class="text-gray-400 text-center text-sm font-medium my-6">Analysez <span class="text-cyan-300">un profil</span> ses <span class="text-amber-300">projets</span> et ses <span class="text-pink-400">langages</span> en<br>quelques secondes .</p>
+        <form class="bg-slate-900 rounded-lg h-14 w-126 mx-auto flex items-center" id="searchArea">
+          <i class="fa-solid fa-magnifying-glass text-cyan-500 ml-4 mr-1"></i>
+          <input type="text" name="searchBar" id="searchBar" placeholder="Entrez un nom d'utilisateur.."
+          class="border-none outline-none font-light bg-slate-900 mr-4 py-2 px-2 text-gray-300 rounded-lg w-[72%] text-base">
+            <button type="submit" class="analyse text-white font-black text-sm rounded-lg w-26 py-2
+            bg-linear-to-r from-cyan-500 via-fuchsia-500 to-pink-400 mr-4 outline-none">Analyser→</button>
+        </form>
+         <p id="err-msg" class="fixed bottom-6 right-116 z-50 text-gray-200 rounded-lg px-4 py-2 w-78 text-center hidden bg-gradient-to-r from-fuchsia-500 via-pink-600 to-pink-400 font-semibold"></p>
+    </main>
+</body>
+</html>
